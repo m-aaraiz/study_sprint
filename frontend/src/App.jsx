@@ -21,7 +21,7 @@ function App() {
 	return (
 		<main className="flex flex-col items-center p-5 w-full min-h-screen">
 			<h1 className="text-center text-3xl font-bold">StudySprint</h1>
-			<div className="flex flex-row gap-9 mt-6">
+			<div className="flex flex-row items-center gap-9 mt-6">
 				<Card className="w-96">
 					<CardBody>
 						<p>
