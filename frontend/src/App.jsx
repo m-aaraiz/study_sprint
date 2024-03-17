@@ -19,22 +19,28 @@ function App() {
 	);
 
 	return (
-		<main className="flex flex-col items-center p-5 w-full min-h-screen">
-			<h1 className="text-center text-3xl font-bold">StudySprint</h1>
-			<div className="flex flex-row items-center gap-9 mt-6">
-				<Card className="w-96">
+		<main className="p-5">
+			<h1 className="text-center text-3xl">StudySprint</h1>
+			<div className="flex flex-col md:flex-row gap-5 mt-6">
+				{/* Timer card */}
+				<Card className="flex-1" style={{ flexGrow: 1.5 }}>
 					<CardBody>
-						<p>
+						<h1 className="text-center text-large mb-11">Timer Card</h1>
+
+						<h1 className="text-center text-4xl mb-11">00:00</h1>
+						<p className="text-center">
 							Make beautiful websites regardless of your design
 							experience.
 						</p>
 					</CardBody>
 				</Card>
 
+				{/* Tasks Card */}
+				<div className="flex flex-col flex-1 gap-5">
 				<Card>
-					<CardHeader>Select a Task</CardHeader>
-					<CardBody>
-						<div className="flex flex-col items-center">
+					<h1 className="text-center mt-2 text-large">Select a Task</h1>
+					<CardBody className="items-center">
+						<div>
 							<ListboxWrapper>
 								<Listbox
 									aria-label="Single selection example"
@@ -44,12 +50,8 @@ function App() {
 									selectedKeys={selectedKeys}
 									onSelectionChange={setSelectedKeys}
 								>
-									<ListboxItem key="l1">
-										CPSC471
-									</ListboxItem>
-									<ListboxItem key="l2">
-										Business
-									</ListboxItem>
+									<ListboxItem key="l1">CPSC471</ListboxItem>
+									<ListboxItem key="l2">Business</ListboxItem>
 									<ListboxItem key="l3">SENG300</ListboxItem>
 									<ListboxItem key="l4">
 										Single Date
@@ -65,6 +67,17 @@ function App() {
 						</div>
 					</CardBody>
 				</Card>
+
+				{/* Goal Card */}
+				<Card className="flex-1">
+					<h1 className="text-center mt-2 text-large">Select a Task</h1>
+					<CardBody>
+						<h1>This is where the daily goal will go</h1>
+						<p>Placeholder text</p>
+						<CardFooter>Placeholder text</CardFooter>
+					</CardBody>
+				</Card>
+				</div>
 			</div>
 		</main>
 	);
